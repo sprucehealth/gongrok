@@ -1,4 +1,4 @@
-module github.com/revzim/gongrok
+module github.com/sprucehealth/gongrok
 
 go 1.14
 
