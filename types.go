@@ -86,6 +86,7 @@ type (
 		Inspect       bool     `json:"inspect"`    // INSPECT TRANSACTIONAL DATA OF NGROK TUNNEL
 		RemoteAddress string   `json:"remoteaddr"` // NGROK PUBLIC ADDRESS
 		IsCreated     bool     `json:"iscreated"`  // IF TUNNEL CREATED
+		Subdomain     string   `json:"subdomain"`
 	}
 	// Options -
 	// OPTIONS FOR COMMAND TO START NGROK
@@ -166,5 +167,6 @@ func (t *Tunnel) getJSON() Map {
 		"name":    t.Name,
 		"inspect": t.Inspect,
 		"auth":    t.Auth,
+		"subdomain": t.Subdomain,
 	}
 }
