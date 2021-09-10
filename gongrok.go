@@ -53,7 +53,7 @@ func InitLoggerWriter(fileName string) {
 	if _, err := os.Stat(Settings.LogDir); os.IsNotExist(err) {
 		os.Mkdir(Settings.LogDir, 0700)
 	}
-	f, err := os.OpenFile(fmt.Sprintf("./logs/%s", fileName), os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+	f, err := os.OpenFile(fmt.Sprintf("./%s/%s", Settings.LogDir, fileName), os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 	if err != nil {
 		log.Fatalf("error opening file: %v", err)
 	}
