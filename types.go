@@ -87,6 +87,7 @@ type (
 		RemoteAddress string   `json:"remoteaddr"` // NGROK PUBLIC ADDRESS
 		IsCreated     bool     `json:"iscreated"`  // IF TUNNEL CREATED
 		Subdomain     string   `json:"subdomain"`
+		Hostname      string   `json:"hostname"`
 	}
 	// Options -
 	// OPTIONS FOR COMMAND TO START NGROK
