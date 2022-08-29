@@ -62,7 +62,7 @@ func (c *Client) InitTunnel(t *Tunnel) (err error) {
 
 			if err != nil {
 				if Settings.ShouldLog {
-					Logger.Printf("failed to init tunnel: %s | addr: %s\n", t.Name, t.LocalAddress)
+					Logger.Printf("failed to init tunnel: %s | addr: %s\n%#v", t.Name, t.LocalAddress, err)
 				}
 				return err
 			}
